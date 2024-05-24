@@ -1,0 +1,107 @@
+/* declaring font */
+@font-face {
+    font-family: 'pixel'; /* Choose a name for your font */
+    src: url('pixel.TTF') format('truetype'); /* Specify the path to your font file */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: lightblue;
+}
+
+#timer {
+    font-family: 'pixel', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+#description {
+    position: relative;
+    bottom: 40px;
+    font-size: 30px;
+}
+
+/* Table */
+table {
+    position: relative;
+    top: 300px;
+    left: 50%;
+    height: 300px;
+    width: 700px;
+    transform: translate(-50%, -50%);
+    border: 5px solid;
+    border-radius: 40px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    color: white;
+}
+
+td {
+    border: 5px solid;
+    text-align: center;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+
+/* Calculate */
+h1 {
+    font-family: 'pixel', sans-serif;
+    font-size: 100px;
+    text-align: center;
+    position: relative;
+}
+
+#questionForm {
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+    font-family: 'pixel', sans-serif;   
+    font-size: 40px;
+    color: white;
+}
+
+/* aligning all the forms witht the labels */
+input {
+    background-color: transparent;
+    outline: none;
+    border: none;    
+    color: white;
+    position: relative;
+    bottom: 8px;
+    left: 18px;
+    font-size: 25px;
+    width: 55px;
+
+}
+
+p {
+    font-family: "Exo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 30px;
+}
+
+h3 {
+    position: absolute;
+    top: 0%;
+    right: 4%;
+    font-size: 30px;
+}
+
+#returning_img {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 5%;
+}
+
+#finished_img {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 3%;
+}

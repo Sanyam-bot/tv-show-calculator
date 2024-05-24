@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/cal_style.css">
+    <style>
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            background-image: url(https://image.tmdb.org/t/p/original{{file_path}});
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            filter: blur(2px) brightness(25%); /* Adjust the blur amount as needed */
+            z-index: -1; /* Ensure the background is behind other content */
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+        <h1>CALCULATE</h1>
+
+        <span id="hidden">
+            <input id="name" type="hidden" value="{{ name }}">
+            <input id="days" type="hidden" value="{{ days }}">
+            <input id="hours" type="hidden" value="{{ hours }}">
+            <input id="minutes" type="hidden" value="{{ minutes }}">
+            <input id="status" type="hidden" value="{{ status }}">
+            <input id="total_time" type="hidden" value="{{ total_time }}">
+        </span>
+
+        <div id="questionForm">
+            <label for="user_hours">How many hours and minutes per day: </label>
+            <input id="user_hours" type="number" min="0" max="24" value="0"> 
+            <label for="user_hours">hours</label>
+            <input id="user_minutes" type="number" min="0" max="60" value="0"> 
+            <label for="user_minutes">minutes</label>
+            <br>
+            <label for="user_days">How many days in a week: </label>
+            <input id="user_days" type="number" min="0" max="7" value="0">  
+            <br>  
+        </div>
+        <div id="timer">
+            <div style="font-size: 130px;">
+                <span id="counter_0">00</span><span>:</span><span id="counter_1">00</span><span>:</span><span id="counter_2">00</span><span>:</span><span id="counter_3">00</span>
+            </div>
+            <div id="description">
+                <span id="weeks_desc" style="margin-right: 60px">WEEKS</span>
+                <span id="days_desc" style="margin-right: 63px">DAYS</span>
+                <span id="hours_desc" style="margin-right: 44px">HOURS</span>
+                <span id="minutes_desc">MINUTES</span>
+        </div>
+        <p id="result"></p>
+        <div>
+            <!-- <table>
+                <tbody>
+                    <tr>
+                        <td>Seasons:</td>
+                        <td>{{ season }}</td>
+                    </tr>
+                    <tr>
+                        <td>Episodes:</td>
+                        <td>{{ episodes }}</td>
+                    </tr>
+                    <tr>
+                        <td>Rating:</td>
+                        <td>{{ rating }}</td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>{{ status }}</td>
+                    </tr>
+                    <tr>
+                        <td>Total time:</td>
+                        <td>{{ days }} days {{ hours }} hours {{ minutes }} minutes</td>
+                    </tr>
+                </tbody>
+            </table>     -->
+        </div> 
+        <div id="returning_img">
+            <img src="static/image.png" alt="returning series" height="50px" width="45px">
+        </div>
+        <div id="finished_img">
+            <img src="static/image(1).png" alt="series finished" height="85px" width="75px">
+        </div>
+        <script src="static/calculate.js"></script>
+</body>
+</html>

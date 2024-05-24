@@ -1,0 +1,53 @@
+/* declaring font */
+@font-face {
+    font-family: 'pixel'; /* Choose a name for your font */
+    src: url('pixel.TTF') format('truetype'); /* Specify the path to your font file */
+}
+
+  
+body {
+    background-image: url("light_blue.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    text-align: center;
+}
+
+#inputField {
+    width: 99%;
+    margin: 10px;
+    position: absolute;
+    bottom: 50%;
+}
+
+#searchinput {
+    border: none;
+    outline: none;
+    width: 32%;
+    font-family: 'pixel', sans-serif;
+    font-size: 70px;
+    font-weight: 500;
+    color: black;
+    background-color: transparent;
+}
+
+#searchresults {
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    text-align: left;
+    font-family: 'pixel', sans-serif;
+    font-size: 45px;
+}
+
+/* deletes the underline from every link */
+a {
+    text-decoration: none;
+    color: #4A4A4A;
+}
+
+ul {
+    list-style-type: none;
+}

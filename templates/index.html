@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV-SHOW</title>
+    <link rel="stylesheet" href="static/index_style.css">
+<body>
+    <!-- Main Content -->
+    <div class="container">
+        <form id="inputField" action="/" method="post">
+            <input id="searchinput" autofocus autocomplete="off" placeholder="Type in a TV-SHOW" name="query" type="text" oninput="capitalize()">
+            <input id="search" hidden type="submit">
+        </form>
+        <ul id="searchresults"></ul>
+        <form id="hiddenForm" action="/calculate" method="get">
+            <input id="hiddenIdInput" type="hidden" name="show_id">
+        </form>
+    </div>
+    <script src="static/index.js"></script>    
+</body>
+</html>
