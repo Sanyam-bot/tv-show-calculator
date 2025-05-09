@@ -1,7 +1,7 @@
 /* declaring font */
 @font-face {
     font-family: 'pixel'; /* Choose a name for your font */
-    src: url('pixel.TTF') format('truetype'); /* Specify the path to your font file */
+    src: url('../fonts/pixel.TTF') format('truetype'); /* Specify the path to your font file */
 }
 
 body {
